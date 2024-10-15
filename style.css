@@ -4,51 +4,35 @@ body {
 
   margin: 0;
   padding: 0;
+}
 
+.father {
   display: grid;
   height: 100vh;
-  /* grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 2fr 1fr;
 
-  grid-template-areas:
-    "a a a a"
-    "b b b c"
-    "d d d d"; */
+  row-gap: 10px;
+  column-gap: 20px;
 
-  grid-template:
-    "a a a a" 1fr
-    "b b b c" 2fr
-    "d d d d" 1fr / 1fr 1fr 1fr 1fr;
+  grid-template-columns: 100px 200px 50px;
+  grid-template-rows: 200px 100px;
 }
 
-header {
-  background-color: aqua;
-  grid-area: a;
+.child {
+  background-color: tomato;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  color: white;
+  font-size: 38px;
 }
 
-section {
-  background-color: coral;
-  grid-area: b;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.child:first-child {
+  background-color: khaki;
+  /* grid-row: span 2; */
 }
 
-aside {
-  background-color: forestgreen;
-  grid-area: c;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-footer {
-  background-color: blueviolet;
-  grid-area: d;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.child:last-child {
+  background-color: turquoise;
+  grid-column: 2 / span 2;
 }
