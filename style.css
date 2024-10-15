@@ -8,13 +8,13 @@ body {
 
 .father {
   display: grid;
-  height: 100vh;
-
-  row-gap: 10px;
-  column-gap: 20px;
-
-  grid-template-columns: 100px 200px 50px;
-  grid-template-rows: 200px 100px;
+  gap: 10px;
+  min-height: 50vh;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-auto-columns: 0.5fr;
+  grid-auto-rows: 1fr;
+  grid-auto-flow: row;
 }
 
 .child {
@@ -25,14 +25,4 @@ body {
 
   color: white;
   font-size: 38px;
-}
-
-.child:first-child {
-  background-color: khaki;
-  /* grid-row: span 2; */
-}
-
-.child:last-child {
-  background-color: turquoise;
-  grid-column: 2 / span 2;
 }
